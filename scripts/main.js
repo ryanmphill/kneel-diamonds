@@ -1,4 +1,5 @@
 import { MetalOptions } from "./MetalOptions.js"
+import { PlaceOrderButton } from "./PlaceOrder.js"
 import { SizeOptions } from "./SizeOptions.js"
 import { StyleOptions } from "./StyleOptions.js"
 
@@ -7,6 +8,7 @@ const render = async () => {
     const metalOptionsHTML = await MetalOptions()
     const sizeOptionsHTML = await SizeOptions()
     const styleOptionsHTML = await StyleOptions()
+    const orderButtonHTML = PlaceOrderButton()
 
     const container = document.querySelector("#container")
 
@@ -31,7 +33,7 @@ const render = async () => {
         </article>
 
         <article class="order">
-
+            ${orderButtonHTML}
         </article>
 
         <article class="customOrders">
