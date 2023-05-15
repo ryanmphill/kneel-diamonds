@@ -70,5 +70,34 @@
       "price": 1241
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "timestamp": 1684184077085,
+      "metalId": 2,
+      "sizeId": 1,
+      "styleId": 3,
+      "id": 1
+    },
+    {
+      "timestamp": 1684184113135,
+      "metalId": 1,
+      "sizeId": 2,
+      "styleId": 1,
+      "id": 2
+    },
+    {
+      "timestamp": 1684185824497,
+      "metalId": 3,
+      "sizeId": 2,
+      "styleId": 3,
+      "id": 3
+    },
+    {
+      "timestamp": 1684185837063,
+      "metalId": 1,
+      "sizeId": 3,
+      "styleId": 2,
+      "id": 4
+    }
+  ]
 }

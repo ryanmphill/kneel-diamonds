@@ -44,4 +44,7 @@ export const placeOrder = async () => {
     // Send the transient state to your API
     const response = await fetch("http://localhost:8088/orders", postOptions)
 
+    // Broadcast a custom event that the state has changed so the browser can listen and update
+    const customEvent = new CustomEvent("orderSubmitted")
+    document.dispatchEvent(customEvent)
 }
