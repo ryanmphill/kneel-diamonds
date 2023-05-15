@@ -1,0 +1,23 @@
+body {
+    color: rgb(35, 35, 35);
+    background-color: antiquewhite;
+}
+
+#container {
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.options {
+    border: 1px dashed lightskyblue;
+    box-shadow: -2px 2px 4px darkslategrey;
+    border-radius: 10px;
+    flex-basis: calc(80%/3);
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
