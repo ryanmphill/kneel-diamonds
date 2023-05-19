@@ -70,6 +70,23 @@
       "price": 1241
     }
   ],
+  "type": [
+    {
+      "id": 1,
+      "name": "ring",
+      "priceMultiplier": 1
+    },
+    {
+      "id": 2,
+      "name": "earrrings",
+      "priceMultiplier": 2
+    },
+    {
+      "id": 3,
+      "name": "necklace",
+      "priceMultiplier": 4
+    }
+  ],
   "orders": [
     {
       "timestamp": 1684184077085,
