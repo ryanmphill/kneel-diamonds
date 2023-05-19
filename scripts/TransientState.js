@@ -3,7 +3,8 @@ const transientState= {
     timestamp: 0,
     metalId: 0,
     sizeId: 0,
-    styleId: 0
+    styleId: 0,
+    typeId: 0
 }
 ////////////////////////////////////////////////
 // Export Functions to save choices ////////////
@@ -20,6 +21,11 @@ export const setStyleChoice = (chosenStyle) => {
 
 export const setSizeChoice = (chosenSize) => {
     transientState.sizeId = chosenSize
+    console.log(transientState)
+}
+
+export const setTypeChoice = (chosenType) => {
+    transientState.typeId = chosenType
     console.log(transientState)
 }
 // Export function to set the time order was placed //////////////////////
