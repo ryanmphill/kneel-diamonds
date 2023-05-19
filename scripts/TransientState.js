@@ -33,7 +33,21 @@ export const setTime = () => {
     const currentDate = new Date()
     const timeStamp = currentDate.getTime()
     transientState.timestamp = timeStamp
+    console.log("Order placed, timestamp set...")
+    console.log(transientState)
+}
 
+//////////////////////////////////////////////////////////////////
+// Define function to reset transient state to default ///////////
+//////////////////////////////////////////////////////////////////
+const resetTransientState = () => {
+    transientState.timestamp = 0
+    transientState.metalId = 0
+    transientState.sizeId = 0
+    transientState.styleId = 0
+    transientState.typeId = 0
+    console.log("Transient state has been reset... ")
+    console.log(transientState)
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -55,4 +69,7 @@ export const placeOrder = async () => {
     // Broadcast a custom event that the state has changed so the browser can listen and update
     const customEvent = new CustomEvent("orderSubmitted")
     document.dispatchEvent(customEvent)
+
+    // Reset transientState to its default value ///////////////////////////
+    resetTransientState() //////////////////////////////////////////////////
 }

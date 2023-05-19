@@ -14,7 +14,7 @@ const convertDate = (timestamp) => {
 
 export const Orders = async () => {
     // Get the orders data with expanded size, style, and metal foreign keys
-    const fetchResponse = await fetch("http://localhost:8088/orders?_expand=metal&_expand=style&_expand=size")
+    const fetchResponse = await fetch("http://localhost:8088/orders?_expand=metal&_expand=style&_expand=size&_expand=type")
     const orders = await fetchResponse.json()
 
     let ordersHTML = ""
@@ -25,8 +25,11 @@ export const Orders = async () => {
                 // Convert timestamp to date and time
                 const time = convertDate(order.timestamp)
                 // Add together all the prices for each order
-                const orderPrice = order.metal.price + order.style.price + order.size.price
-                return `<div class="order">Order #${order.id} costs $${orderPrice.toFixed(2)} and was placed at ${time}</div>`
+                const initialOrderPrice = order.metal.price + order.style.price + order.size.price
+                // Modify the price with the multiplier based on the jewelry type chosen
+                const totalPrice = initialOrderPrice * order.type.priceMultiplier
+                // Display the orders in an HTML div
+                return `<div class="order">Order #${order.id} costs $${totalPrice.toFixed(2)} and was placed at ${time}</div>`
             }
         )
         ordersHTML = divStringArray.join("")
