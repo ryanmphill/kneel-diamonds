@@ -70,20 +70,20 @@
       "price": 1241
     }
   ],
-  "type": [
+  "types": [
     {
       "id": 1,
-      "name": "ring",
+      "name": "Ring",
       "priceMultiplier": 1
     },
     {
       "id": 2,
-      "name": "earrrings",
+      "name": "Earrring",
       "priceMultiplier": 2
     },
     {
       "id": 3,
-      "name": "necklace",
+      "name": "Necklace",
       "priceMultiplier": 4
     }
   ],

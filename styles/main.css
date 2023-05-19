@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1.25em;
+    column-gap: 1.25rem;
 }
 
 .options {
@@ -22,6 +23,10 @@ body {
     border-radius: 10px;
     flex-basis: calc(80%/3);
     padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.jewelryTypes {
+    margin-bottom: 1rem;
 }
 
 #orderButton {
