@@ -22,15 +22,17 @@ export const setSizeChoice = (chosenSize) => {
     transientState.sizeId = chosenSize
     console.log(transientState)
 }
-
+// Export function to set the time order was placed //////////////////////
 export const setTime = () => {
     const currentDate = new Date()
     const timeStamp = currentDate.getTime()
     transientState.timestamp = timeStamp
 
 }
-/////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////
+// Export function to POST order to API ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
 export const placeOrder = async () => {
     // Define a postOptions object to specify a POST to the database
     const postOptions = {
